@@ -1,0 +1,20 @@
+doctype html
+html
+    head
+        title= title
+    body
+        h1= message
+        table
+            thead
+                tr
+                    th Nome
+                    th Elemento
+                    th Level
+            tbody
+                each pokemon in pokemons
+                    tr
+                        td= pokemon.properties.pokemon_name
+                        td= pokemon.properties.pokemon_element
+                        td= pokemon.properties.pokemon_level
+        form(action="/add-pokemon" method="get")
+            button(type="submit") Adicionar novo pokemon

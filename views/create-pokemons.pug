@@ -1,0 +1,21 @@
+doctype html
+html
+    head
+        title= title
+    body
+        if success
+            p(style="color: green;") Pokemon criado com sucesso!
+        h1= message
+        form(action="/pokemons" method="post")
+            div
+                label(for="name") Nome:
+                input(type="text" name="pokemon_name" required)
+            div
+                label(for="value") Elemento:
+                input(type="text" name="pokemon_element" required)
+            div
+                label(for="value") Level:
+                input(type="text" name="pokemon_level" required)
+            button(type="submit") Adicionar
+        form(action="/pokemons" method="get")
+            button(type="submit") Voltar à Página Principal
